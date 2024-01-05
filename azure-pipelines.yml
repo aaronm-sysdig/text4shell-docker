@@ -36,6 +36,7 @@ stages:
         apikey: 'cf224533-3ba6-4085-a579-5556272efa3b'
         image: '$(imageName):$(tag)'
         skipTLS: true
+        verbose: true
         jsonOutput: true
         autoPublishArtifacts: true
 
