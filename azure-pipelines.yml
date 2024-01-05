@@ -30,11 +30,9 @@ stages:
         repository: '$(imageName)'
         tags: |
           $(tag)
-    - task: Sysdig@1
+    - task: Sysdig-Inline-Scan@0
       inputs:
         sysdigurl: 'https://app.au1.sysdig.com'
         apikey: 'cf224533-3ba6-4085-a579-5556272efa3b'
-        # image: '$(imageName):$(tag)'
-        image: '$(ImageName):$(tag)'
-        failBuild: true
-        verbose: true
+        image: '$(imageName):$(tag)'
+
